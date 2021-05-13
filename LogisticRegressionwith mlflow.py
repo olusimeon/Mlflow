@@ -60,6 +60,7 @@ def train(df):
     mlflow.log_metric("r2", r2)
     mlflow.log_metric("mae", mae)
     mlflow.sklearn.log_model(logmodel,"model")
+    mlflow.log_artifact(file_name)
 
 train(X_test)
 
